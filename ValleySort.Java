@@ -6,6 +6,8 @@ public class ValleySort{
 
     public static void main(String[] args) {
 
+        // populate array intarray with input data 
+
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
     
@@ -27,7 +29,10 @@ public class ValleySort{
             newarray.add(intarray.get(i));
         }
 
+        // create new output array
         ArrayList finalarray = new ArrayList<>();
+
+        // add even array indices in order to new array 
 
         for (int i=0; i<size;i++){
             if (i%2==0){
@@ -38,8 +43,12 @@ public class ValleySort{
             
         }
 
+        // sort the original array 
+
         newarray.sort(null);
-        // System.out.println(newarray);
+
+
+        // if the size of original array is even, add even array indices in order to new array
 
         if (size%2==0){
         for (int i=0; i<size-1;i++){
@@ -50,6 +59,8 @@ public class ValleySort{
             }
         }}
 
+        // if the size of original array is odd, add odd array indices in order to new array
+
         else{
             for (int i=0; i<size-1;i++){
                 if (i%2!=0){
@@ -59,55 +70,14 @@ public class ValleySort{
                 }
             }
         }
+        // print size of input array
 
-        // for (int i = 0; i<(size-1)/2; i++){
-        //     int num = Integer.parseInt(newarray.get(i*2).toString());
-        //     newarray.remove(i*2); 
-        //     finalarray.add(num);
-        //     System.out.println(finalarray.get(i));
-        // }
-            // newarray.sort(null);
-
-            // int size2 = newarray.size();
-        // for (int i=0; i<size2; i++) {
-        //     finalarray.add(newarray.get(i));
-
-        // }
-
-        // for (int i = 0; i<size/2; i++) {
-        //     int num = Integer.parseInt(newarray.get(i*2).toString());
-        //     newarray.remove(i*2); 
-        //     finalarray.add(num);
-        // }
          System.out.println(size);
-         //System.out.println(finalarray.toString());
-        
 
+         // print out each valley of output array
+        
          for (int i = 0; i<size; i++){
             System.out.println(finalarray.get(i));
          }
-         //System.out.println(finalarray.toString());
-        
-        // for (int i = size/2-1; i>=0; i--) {
-        //     newarray.add(intarray.get(i));
-        // }
-
-
-       // System.out.println(intarray.get(j));
-       // System.out.println(newarray);
-
-        // inplement valley sort 
-
-        // int midpoint = intarray.length/2;
-
-       /* ArrayList finalArray = new ArrayList<>(size);
-
-      
-
-
-       // System.out.println();
-
-
-    */
         scanner.close();
     }}
