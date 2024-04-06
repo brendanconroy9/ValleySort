@@ -74,7 +74,7 @@ public class ValleySort{
 
          System.out.println(size);
 
-         // print out each valley of output array
+         // print out each item of output array
         
          for (int i = 0; i<size; i++){
             System.out.println(finalarray.get(i));
